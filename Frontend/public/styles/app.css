@@ -1,0 +1,48 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toolbar>button {
+    width: 70%;
+}
+
+.view {
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.view label {
+    display: block;
+}
+
+.view input {
+
+}
+
+.view>.inp {
+    margin-bottom: 40px;
+    width: 60%;
+    border-radius: 4px;
+}
