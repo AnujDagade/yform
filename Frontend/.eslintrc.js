@@ -38,5 +38,9 @@ module.exports = {
 			"error",
 			"always"
 		]
-	}
+	},
+	"ignorePatterns": [
+		"webpack.config.js",
+		"dist/",
+	]
 };
