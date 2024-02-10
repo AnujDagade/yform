@@ -38,7 +38,7 @@ body {
 }
 
 .view input {
-
+    width: 60%;
 }
 
 .view>.inp {
