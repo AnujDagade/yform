@@ -17,14 +17,15 @@ submit.addEventListener("click", async () => {
 	const userName = prompt("your name");
 	const formName = prompt(" form name must be unique");
 	
-	// const res = await fetch("https://8000-anujdagade-yform-g84ga1k52dw.ws-us108.gitpod.io/form/save", {
-	// 	method: "POST",
-	// 	headers: {
-	// 		"Content-Type": "application/json",
-	// 	},
-	// 	body: JSON.stringify({ userName, formName, formHTML}),
-	// });
-	// const data = await res.json();
-	// console.log(data);
+	const res = await fetch("https://8000-anujdagade-yform-g84ga1k52dw.ws-us108.gitpod.io/form/save", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ userName, formName, formHTML}),
+	});
+	const data = await res.json();
+	alert(`Save this id to access form later: ${data.id} `);
+	console.log(data);
 
 });

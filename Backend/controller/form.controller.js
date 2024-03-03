@@ -4,10 +4,14 @@ import {Form} from '../models/form.model.js'
 const saveFormDesign = async (req, res) => {
     log('saveFormDesgin');
     console.log(req.body);
-    await Form.create(req.body)
-    const insertedData = await Form.find()
-    res.status(200).send({ message: insertedData||"Success" });
+    const data = await Form.create(req.body)
+    
+    res.status(200).send({ id:  data._id});
 }
 
+const viewForm = async (req, res) => {
+    const form =  await Form.findById(req.params.id)
+    res.status(200).send(form.formHTML);
+}
 
-export { saveFormDesign };
+export { saveFormDesign, viewForm };
